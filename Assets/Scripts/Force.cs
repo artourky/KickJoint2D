@@ -3,8 +3,7 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public class Force : MonoBehaviour {
 
-	public float x = 50f;
-	public float y = 10f;
+	public Vector2 forceApplied = new Vector2(80f, 15f);
 	private Rigidbody2D rb;
 
 	// Use this for initialization
@@ -14,9 +13,9 @@ public class Force : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.X))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			rb.AddForce(new Vector2(x, y), ForceMode2D.Impulse);
+			rb.AddForce(forceApplied, ForceMode2D.Impulse);
 		}
 	}
 }
