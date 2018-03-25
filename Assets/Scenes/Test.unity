@@ -241,7 +241,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7311501f51f9b4ac7a65c838aa638c4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267f98d9ba5054ac2930906d57028585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceApplied: {x: 80, y: 0}
+  forceApplied: {x: 35, y: 15}
 --- !u!1 &1096294731
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,8 +348,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -7, y: 0}
-  - {x: 7, y: 0}
+  - {x: -14, y: 0}
+  - {x: 14, y: 0}
 --- !u!4 &1096294733
 Transform:
   m_ObjectHideFlags: 0
@@ -375,8 +375,6 @@ GameObject:
   - component: {fileID: 2077803806}
   - component: {fileID: 2077803803}
   - component: {fileID: 2077803807}
-  - component: {fileID: 2077803808}
-  - component: {fileID: 2077803809}
   m_Layer: 8
   m_Name: PointImpact
   m_TagString: Untagged
@@ -492,25 +490,6 @@ SpringJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2077803802}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 769217864}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 0.005
-  m_DampingRatio: 1
-  m_Frequency: 1
---- !u!232 &2077803808
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2077803802}
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
@@ -522,21 +501,5 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 0.005
-  m_MaxDistanceOnly: 0
---- !u!256 &2077803809
-FrictionJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2077803802}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 769217864}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_MaxForce: 1
-  m_MaxTorque: 1
+  m_DampingRatio: 1
+  m_Frequency: 0.6
